@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Valentine</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background: linear-gradient(to bottom, #ffe6f0, #ffb3c6);
+            color: #800040;
+        }
+
+        .question {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px #fff;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 12px 25px;
+            margin: 0 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        #oui {
+            background-color: #ff66a3;
+            color: white;
+        }
+
+        #oui:hover {
+            background-color: #ff3385;
+        }
+
+        #non {
+            background-color: #cc6699;
+            color: white;
+        }
+
+        #non:hover {
+            background-color: #993366;
+        }
+
+        img {
+            display: none;
+            max-width: 300px;
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="question">Hey bb, tu veux être ma Valentine ? 💌</div>
+    <button id="oui">Oui ❤️</button>
+    <button id="non">Non 💔</button>
+
+    <img id="photoOui" src="https://i.imgur.com/7RmYQAX.jpg" alt="Photo pour Oui">
+    <img id="photoNon" src="https://i.imgur.com/Y0hXLJj.jpg" alt="Photo pour Non">
+
+    <script>
+        document.getElementById('oui').addEventListener('click', function() {
+            document.getElementById('photoOui').style.display = 'block';
+            document.getElementById('photoNon').style.display = 'none';
+        });
+
+        document.getElementById('non').addEventListener('click', function() {
+            document.getElementById('photoNon').style.display = 'block';
+            document.getElementById('photoOui').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
